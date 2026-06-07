@@ -15,6 +15,7 @@ Automatically unlocks the Premium Plus Season Pass for saves.
 
 Clone the repo & copy the following files from your Fallout Shelter installation directory into `libs/`:
 
+(found in `/Fallout Shelter/FalloutShelter_Data/Managed/`)
 - `Assembly-CSharp.dll`
 - `UnityEngine.dll`
 - `UnityEngine.CoreModule.dll`
