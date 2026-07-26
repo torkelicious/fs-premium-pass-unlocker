@@ -5,7 +5,7 @@ using HarmonyLib;
 
 namespace fspremiumpassunlocker
 {
-    [BepInPlugin("com.torkelicious.fspremiumpassunlocker", "Premium Pass Unlocker", "1.0.0")]
+    [BepInPlugin("com.torkelicious.fspremiumpassunlocker", "Premium Pass Unlocker", "1.0.1")]
     public class Plugin : BaseUnityPlugin
     {
         internal static ManualLogSource logger;
@@ -23,11 +23,11 @@ namespace fspremiumpassunlocker
         }
     }
 
-    [HarmonyPatch(typeof(BaseSeasonDataManager), "ImportSaveData")]
+    [HarmonyPatch(typeof(SeasonDataSO), "ImportSaveData")]
     internal class SeasonPassPatch
     {
         [HarmonyPostfix]
-        private static void Postfix(BaseSeasonDataManager __instance)
+        private static void Postfix(SeasonDataSO __instance)
         {
             if (__instance == null) return;
 
